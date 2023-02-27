@@ -1,0 +1,153 @@
+/* mobie */
+@media (max-width:739px){
+    .hide-on-mobile{
+        display: none;
+    }
+
+    .headerb{
+        justify-content: space-between;
+        margin:0 24px;
+    }
+
+    .headerb__search{
+        position:fixed;
+        z-index:2;
+        height:var(--header-filter-height);
+        top:var(--header-height);
+        right:0;
+        width:100%;
+        box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+        animation: search-show ease-in 0.3s;
+    }
+
+    @keyframes search-show{
+        from{
+            opacity:0;
+            transform: translateY(-100%);
+        }
+        to{
+            opacity:1;
+            transform: translateY(0);
+        }
+    }
+
+    .headerb-cart-wrap{
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .headerb__logo-web{
+        width:100px;
+        margin:0;
+    }
+
+    .headerb__cart{
+        width: unset !important;
+    }
+
+    .header__cart-detail:after{
+        right:-10px;
+    }
+
+    .pagination__btn-link,
+    .pagination__btn-link i{
+        font-size:2rem;
+        min-width:30px;
+        line-height:30px;   
+        height:30px;
+
+    }
+
+    .pagination__btn{
+        padding: 0 4px;
+    }
+
+    .headerb-search-mobile__icon{
+        display:block;
+    }
+
+    #app-container,
+    .footer--detail{
+        padding:0 10px;
+    }
+}
+
+/* tablet */
+@media (min-width:740px) and (max-width:1023px){
+    
+
+    .headerb__cart{
+        justify-content: end;
+        width:80px;
+    }
+
+    .header__cart-detail:after{
+        right:-15px;
+    }
+
+    .hide-on-tablet{
+        display: none ;
+    }
+
+    
+
+   
+
+    
+}
+
+/* mobie and tablet */
+@media (max-width:1023px){
+    #app-container{
+        padding-top:16px;
+    }
+
+    .category-mobile{
+        display:block;
+    }
+
+    :root{
+        --navbar-height:0px;
+    --header-height:68px;
+    }
+
+    #header{
+        position:fixed;
+        right:0;
+        top:0;
+        left:0;
+        z-index:10;
+    }
+
+    .hide-one-mobile-tablet{
+        display: none;
+    }
+
+    .product-item__body{
+        height:150px;
+    }
+
+    .header-filter__list{
+        display:flex;
+    }
+
+    .header__cart-list{
+        position:fixed;
+        top:var(--header-height);
+        right:0;
+        width:100%;
+        padding:0 calc((100% - 644px)/2);
+        z-index:9;
+    }
+
+    .header__cart-body{
+        height:30vh;
+    }
+
+    .header__cart-list:before{
+        display:none;
+    }
+
+    #app-container{
+        margin-top:calc(var(--header-height) + var(--header-filter-height));
+    }
+}
